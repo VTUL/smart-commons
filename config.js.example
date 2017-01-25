@@ -1,0 +1,44 @@
+var config = {};
+
+//General Configuration
+config.deviceID = "Module1"; // change this to something unique for each module you load this code on
+config.bounceTimer = 1;
+config.alarmDefault = true; //default status for alarm
+
+//URL List
+config.postURL = "https://example.edu/api/modules";
+config.alarmURL = "https://example.edu/api/warning.php";
+
+//Beacon Configuration
+config.uuid = 'b9407f30f5f8466eaff925556b57fe6d';
+config.beaconTestCount = 3; // defines how many times a beacon must successfully report that it is the closest to enact an event. Setting this higher will help if your beacons are too close or the batteries fluctuate in power a lot 
+config.areas = [
+  {
+    "name": "Region 1",
+    "major": 
+  }, 
+  {
+    "name": "Region 2",
+    "major": 
+  }, 
+  {
+    "name": "Region 3",
+    "major": 
+  }
+];
+
+//Pin Configuration
+config.piezoPin = "PWM0";
+config.accelController = "ADXL345"; // automatically sets pins based on controller type
+config.fsrPin = "XIO-P0";
+config.buttonLidPin = "XIO-P3";
+config.buttonChairPin = "XIO-P2";
+
+//Sensor Settings
+config.alarmFreq = 587; // in hrtz
+config.alarmDuration = 1000000000000; // in ms
+config.accelBounce = 3000; // in ms
+config.accelSensitivity = 1; // higher is more sensitive, lower is less. Over 2 will be hard to trigger. Less than 0.7 will trigger almost constantly
+config.batteryCheck = 10000;
+
+exports = module.exports = config;
