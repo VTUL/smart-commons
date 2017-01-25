@@ -1,14 +1,18 @@
-<snippet>
-  <content><![CDATA[
-# ${1:Project Name}
+# Smart Commons
 A nodejs package that monitors a series of sensors attached to a C.H.I.P. board and reports space usage to a database behind a REST API.
 ## Installation
 To get the software up and running, connect to the C.H.I.P. via serial or ssh and run:
+
 `cd`
+
 `git clone https://git.it.vt.edu/bradley1/smart-commons.git`
+
 `cd smart-commons`
+
 `npm install`
+
 `node index.js`
+
 ## Usage
 TODO: add schematic
 This project requires creating one of the Smart Commons modules and writing it to a C.H.I.P. controller. The schematic for this writing is provided below:
@@ -25,6 +29,3 @@ The Smart Commons started as a project in the Virginia Tech University Libraries
 This project relies on the Johnny-Five and chipio repositories. 
 ## License
 MIT
-]]></content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
