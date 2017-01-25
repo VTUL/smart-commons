@@ -18,7 +18,7 @@ Change the values in the config.js file to match those for your project. You'll 
 
 `npm install`
 
-`node index.js`
+`sudo node index.js`
 
 ## Usage
 TODO: add schematic
