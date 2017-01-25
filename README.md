@@ -6,7 +6,7 @@ To get the software up and running, connect to the C.H.I.P. via serial or ssh an
 
 `cd`
 
-`git clone https://git.it.vt.edu/bradley1/smart-commons.git`
+`git clone https://github.com/VTUL/smart-commons.git`
 
 `cd smart-commons`
 
