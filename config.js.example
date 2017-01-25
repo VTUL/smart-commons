@@ -10,7 +10,7 @@ config.postURL = "https://example.edu/api/modules";
 config.alarmURL = "https://example.edu/api/warning.php";
 
 //Beacon Configuration
-config.uuid = 'b9407f30f5f8466eaff925556b57fe6d';
+config.uuid = '';
 config.beaconTestCount = 3; // defines how many times a beacon must successfully report that it is the closest to enact an event. Setting this higher will help if your beacons are too close or the batteries fluctuate in power a lot 
 config.areas = [
   {

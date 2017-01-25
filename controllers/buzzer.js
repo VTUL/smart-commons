@@ -6,7 +6,7 @@ module.exports = {
       console.log("Alarm will trigger if set");
       //request.post(config.alarmURL, function(error, response, body) {
         //        console.log(response.statusCode);
-        //}).form({device_id:config.deviceID, current_location:beacon.getLocationName(beacon.closestBeacon), movement_time:timeSet, battery_level:battery.voltage, alarm_state:alarm_state});
+        //}).form({device_id:config.deviceID, current_location:beacon.getLocationName(beacon.closestBeacon)});
       piezo.frequency(config.alarmFreq, config.alarmDuration);
     });
 
