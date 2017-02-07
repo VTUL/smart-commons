@@ -14,7 +14,7 @@ To get the software up and running, connect to the C.H.I.P. via serial or ssh an
 
 `nano config.js`
 
-Change the values in the config.js file to match those for your project. You'll need urls where your database API is located; region name, a uuid, and major identifiers for your beacons; and a name for that module. 
+Change the values in the config.js file to match those for your project. You'll need urls where your database API is located and an API key (if you're using one); region name, a uuid, and major identifiers for your beacons; and a name for that module. 
 
 `npm install`
 
