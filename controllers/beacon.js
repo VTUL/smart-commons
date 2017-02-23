@@ -65,7 +65,7 @@ module.exports = {
             var event = 'Moved from ' + module.exports.getLocationName(module.exports.closestBeacon) + ' to ' + module.exports.getLocationName(beacon)
             request.post(config.postOptions, function (error, response, body) {
               console.log(response.statusCode)
-            }).form({current_location: location, event: event, device: deviceName})
+            }).form({current_location: location, type_of_relocation: event, device_name: config.deviceID, battery_level: battery.voltage, alarm_state: alarm_state})
             module.exports.closestBeacon = beacon
             console.log(event)
           }

@@ -12,9 +12,9 @@ module.exports = {
         var duration = timeStood - timeSat
         alarm.getAlarmStatus(request)
         if (duration > 10000) {
-          request.post(config.postURL, function (error, response, body) {
+          request.post(config.postOptions, function (error, response, body) {
             console.log(response.statusCode)
-          }).form({device_id: config.deviceID, current_location: beacon.getLocationName(beacon.closestBeacon), time_sat_down: timeSat, time_stood_up: timeStood, duration_of_sit: duration, battery_level: battery.voltage, alarm_state: alarm_state})
+          }).form({device_name: config.deviceID, current_location: beacon.getLocationName(beacon.closestBeacon), time_sat_down: timeSat, time_stood_up: timeStood, duration_of_sit: duration, battery_level: battery.voltage, alarm_state: alarm_state})
           console.log('FSR triggered')
         }
         timeSat = false

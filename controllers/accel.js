@@ -12,7 +12,7 @@ module.exports = {
         console.log('Send Data!')
         request.post(config.postOptions, function (error, response, body) {
           console.log(response.statusCode)
-        }).form({device_id: config.deviceID, current_location: beacon.getLocationName(beacon.closestBeacon), movement_time: timeSet, battery_level: battery.voltage, alarm_state: alarm_state})
+        }).form({device_name: config.deviceID, current_location: beacon.getLocationName(beacon.closestBeacon), movement_time: timeSet, battery_level: battery.voltage, alarm_state: alarm_state})
       } else if (timeNow - timeSet > config.accelBounce) {
         timeSet = false
       }
