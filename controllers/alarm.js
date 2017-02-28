@@ -1,5 +1,5 @@
 var config = require('../config.js')
-
+var alarmState
 module.exports = {
   alarmState: alarmState,
   getAlarmStatus: function (request) {

@@ -22,7 +22,7 @@ board.on('ready', function () {
     freq: 3000
   })
 
-  var fsr = new five.Sensor({
+  var fsrinit = new five.Sensor({
     pin: config.fsrPin,
     type: 'digital'
   })
@@ -38,5 +38,5 @@ board.on('ready', function () {
   beacon.watchForRelocation(request)
   accel.watchForMovement(accelerometer, request, battery, beacon)
   buzzer.alarm(buttonLid, buttonChair, piezo, request, beacon, battery)
-  fsr.watchForFSR(fsr, request, beacon, battery, alarm)
+  fsr.watchForFSR(fsrinit, request, beacon, battery, alarm)
 })
