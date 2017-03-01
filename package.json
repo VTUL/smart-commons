@@ -1,17 +1,19 @@
 {
   "name": "smart-commons",
   "version": "1.0.0",
-  "description": "",
+  "description": "A project using sensors to collect anonymous data on how public spaces are used by patrons.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Dr. Jonathan Bradley",
+  "license": "MIT",
+  "repository": "https://github.com/VTUL/smart-commons",
   "dependencies": {
     "bleacon": "^0.5.1",
     "chip-io": "^2.1.0",
     "johnny-five": "^0.10.6",
+    "moment": "^2.17.1",
     "request": "^2.79.0"
   }
 }
