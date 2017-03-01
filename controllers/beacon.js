@@ -51,7 +51,7 @@ module.exports = {
     })
     return name
   },
-  watchForRelocation: function (request, battery) {
+  watchForRelocation: function (request, battery, alarm) {
     Bleacon.startScanning(config.uuid)
     Bleacon.on('discover', function (beacon) {
       if (module.exports.closestBeacon === '') {
