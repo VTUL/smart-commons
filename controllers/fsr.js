@@ -9,7 +9,8 @@ module.exports = {
         timeSat = new Date()
       } else if (value === 0 && timeSat) {
         var timeStood = new Date()
-        var duration = Date.now(timeStood) - Date.now(timeSat)
+        var duration = timeStood.getTime() - timeSat.getTime()
+        console.log(duration)
         alarm.getAlarmStatus(request)
         if (duration > 10000) {
           request.post(config.postOptions, function (error, response, body) {
