@@ -35,7 +35,7 @@ board.on('ready', function () {
 
   // call watchdogs for each sensor
   battery.getBatteryLevel(batteryVoltage)
-  beacon.watchForRelocation(request)
+  beacon.watchForRelocation(request, battery)
   accel.watchForMovement(accelerometer, request, battery, beacon)
   buzzer.alarm(buttonLid, buttonChair, piezo, request, beacon, battery)
   fsr.watchForFSR(fsrInit, request, beacon, battery, alarm)
