@@ -2,6 +2,7 @@ module.exports = {
   watchForMovement: function (accelerometer, request, battery, beacon, alarm) {
     var config = require('../config.js')
     var timeSet = false
+    var moment = require('moment')
 
     accelerometer.on('change', function () {
       var timeNow = moment()
