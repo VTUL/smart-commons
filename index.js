@@ -29,7 +29,6 @@ board.on('ready', function () {
 
   var piezo = new five.Piezo(config.piezoPin)
   var buttonLid = new five.Button(config.buttonLidPin)
-  var buttonChair = new five.Button(config.buttonChairPin)
 
   var batteryVoltage = new chipio.BatteryVoltage()
 

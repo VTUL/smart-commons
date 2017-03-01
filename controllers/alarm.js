@@ -1,5 +1,6 @@
 var config = require('../config.js')
 var alarmState
+
 module.exports = {
   alarmState: alarmState,
   getAlarmStatus: function (request) {
@@ -7,6 +8,7 @@ module.exports = {
       console.log('Alarm GET response: ' + response.statusCode)
       var data = JSON.parse(body)
       data[config.deviceID] === 1 ? module.exports.alarmState = true : module.exports.alarmState = false
+      console.log('New alarmState: ' + module.exports.alarmState)
       return module.exports.alarmState
     })
   }
