@@ -1,7 +1,7 @@
 var config = require('../config.js')
 
 module.exports = {
-  alarm: function (buttonLid, buttonChair, piezo, request, beacon, battery, alarm) {
+  alarm: function (buttonLid, piezo, request, beacon, battery, alarm) {
     buttonLid.on('up', function () {
       if (alarm.alarmState) {
         console.log('Alarm triggered!')
