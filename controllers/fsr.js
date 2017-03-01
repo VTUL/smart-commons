@@ -6,10 +6,10 @@ module.exports = {
 
     fsr.on('change', function (value) {
       if (value === 1) {
-        timeSat = Date.now()
+        timeSat = new Date()
       } else if (value === 0 && timeSat) {
-        var timeStood = Date.now()
-        var duration = timeStood - timeSat
+        var timeStood = new Date()
+        var duration = timeStood.now() - timeSat.now()
         alarm.getAlarmStatus(request)
         if (duration > 10000) {
           request.post(config.postOptions, function (error, response, body) {
