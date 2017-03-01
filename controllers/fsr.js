@@ -10,7 +10,7 @@ module.exports = {
         timeSat = moment()
       } else if (value === 0 && timeSat) {
         var timeStood = moment()
-        var duration = moment.duration(timeNow.diff(timeSet)).asMilliseconds()
+        var duration = moment.duration(timeStood.diff(timeSat)).asMilliseconds()
         console.log(duration)
         alarm.getAlarmStatus(request)
         if (duration > 10000) {
