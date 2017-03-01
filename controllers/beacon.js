@@ -63,9 +63,10 @@ module.exports = {
             var location = module.exports.getLocationName(beacon)
             console.log(module.exports.getLocationName(beacon))
             var event = 'Moved from ' + module.exports.getLocationName(module.exports.closestBeacon) + ' to ' + module.exports.getLocationName(beacon)
+            var timestamp = new Date()
             request.post(config.postOptions, function (error, response, body) {
               console.log(response.statusCode)
-            }).form({current_location: location, type_of_relocation: event, device_name: config.deviceID, battery_level: battery.voltage, alarm_state: alarm.alarmState})
+            }).form({current_location: location, time_relocated: timestamp.toISOString().slice(0, 19).replace('T', ' '), type_of_relocation: event, device_name: config.deviceID, battery_level: battery.voltage, alarm_state: alarm.alarmState})
             module.exports.closestBeacon = beacon
             console.log(event)
           }
