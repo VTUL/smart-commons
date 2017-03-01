@@ -14,8 +14,8 @@ var board = new five.Board({
 })
 
 board.on('ready', function () {
-  // set default alarm state
-  alarm.alarmState = config.alarmDefault
+  // get initial alarm state
+  alarm.getAlarmStatus(request)
   // configure and activate sensors
   var accelerometer = new five.Accelerometer({
     controller: config.accelController,
@@ -37,6 +37,6 @@ board.on('ready', function () {
   battery.getBatteryLevel(batteryVoltage)
   beacon.watchForRelocation(request, battery, alarm)
   accel.watchForMovement(accelerometer, request, battery, beacon, alarm)
-  buzzer.alarm(buttonLid, buttonChair, piezo, request, beacon, battery)
+  buzzer.alarm(buttonLid, buttonChair, piezo, request, beacon, battery, alarm)
   fsr.watchForFSR(fsrInit, request, beacon, battery, alarm)
 })
