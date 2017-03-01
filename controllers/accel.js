@@ -5,9 +5,9 @@ module.exports = {
     var moment = require('moment')
 
     accelerometer.on('change', function () {
-      var timeNow = moment().format('YYYY-MM-DD HH:mm:ss')
+      var timeNow = moment().utcOffset(-5).format('YYYY-MM-DD HH:mm:ss')
       if (this.acceleration > config.accelSensitivity && !timeSet) {
-        timeSet = moment().format('YYYY-MM-DD HH:mm:ss')
+        timeSet = moment().utcOffset(-5).format('YYYY-MM-DD HH:mm:ss')
         // console.log(beacon.getLocationName(beacon.closestBeacon))
         // console.log(battery.voltage)
         console.log('Accelerometer Triggered')
