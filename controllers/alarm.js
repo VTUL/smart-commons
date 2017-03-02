@@ -9,7 +9,6 @@ module.exports = {
       var data = JSON.parse(body)
       data[0][config.deviceID] === '1' ? module.exports.alarmState = true : module.exports.alarmState = false
       console.log('New alarmState: ' + module.exports.alarmState)
-      console.log(data[0][config.deviceID])
       return module.exports.alarmState
     })
   }
