@@ -13,7 +13,7 @@ module.exports = {
         request.post(config.postOptions, function (error, response, body) {
           console.log('Accelerometer POST response: ' + response.statusCode)
         }).form({device_name: config.deviceID, current_location: beacon.getLocationName(beacon.closestBeacon), time_of_movement: timeSet.utcOffset(config.timeOffset).format('YYYY-MM-DD HH:mm:ss'), battery_level: battery.voltage, alarm_state: alarm.alarmState})
-      } else if (moment.duration(timeNow.diff(timeSet)).asMilliseconds() > config.accelBounce) {
+      } else if (timeNow.diff(timeSet) > config.accelBounce) {
         timeSet = false
       }
     })
