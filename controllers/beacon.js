@@ -66,7 +66,11 @@ module.exports = {
             var event = 'Moved from ' + module.exports.getLocationName(module.exports.closestBeacon) + ' to ' + module.exports.getLocationName(beacon)
             var timestamp = moment()
             request.post(config.postOptions, function (error, response, body) {
-              console.log('Beacon POST response: ' + response.statusCode)
+              if (error) {
+                console.log('Error: ' + error)
+              } else {
+                console.log('Beacon POST response: ' + response.statusCode)
+              }
             }).form({current_location: location, time_relocated: timestamp.utcOffset(config.timeOffset).format('YYYY-MM-DD HH:mm:ss'), type_of_relocation: event, device_name: config.deviceID, battery_level: battery.voltage, alarm_state: alarm.alarmState})
             module.exports.closestBeacon = beacon
             console.log(event)

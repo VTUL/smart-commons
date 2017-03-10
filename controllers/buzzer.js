@@ -6,7 +6,11 @@ module.exports = {
       if (alarm.alarmState) {
         console.log('Alarm triggered!')
         request.post(config.warningOptions, function (error, response, body) {
-          console.log('Warning POST response: ' + response.statusCode)
+          if (error) {
+            console.log('Error: ' + error)
+          } else {
+            console.log('Warning POST response: ' + response.statusCode)
+          }
         }).form({device_name: config.deviceID, current_location: beacon.getLocationName(beacon.closestBeacon)})
         piezo.frequency(config.alarmFreq, config.alarmDuration)
       } else {
