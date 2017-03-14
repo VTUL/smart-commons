@@ -24,7 +24,7 @@ Change the values in the config.js file to match those for your project. You'll 
 
 This project requires creating one of the Smart Commons modules and connecting it to a C.H.I.P. controller. The wiring schematic for the module is provided below:
 
-![module schematic](https://github.com/VTUL/smart-commons/raw/master/schematics/smart-commons.png "Smart Commons Module Schematic")
+![module schematic](https://github.com/VTUL/smart-commons/raw/master/schematics/smart-commons-V1.1.png "Smart Commons Module Schematic")
 
 ## Contributing
 1. Fork it!
