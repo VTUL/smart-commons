@@ -54,7 +54,7 @@ config.buttonChairPin = "XIO-P2"
 config.alarmFreq = 587 // in hrtz
 config.alarmDuration = 1000000000000 // in ms
 config.accelBounce = 3000 // in ms
-config.accelSensitivity = 1 // higher is more sensitive, lower is less. Over 2 will be hard to trigger. Less than 0.7 will trigger almost constantly
+config.accelSensitivity = 1.5 // higher is less sensitive, lower is more. Over 2 will be hard to trigger. Less than 0.7 will trigger almost constantly
 config.batteryCheck = 10000
 
 exports = module.exports = config
