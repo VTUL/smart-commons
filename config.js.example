@@ -1,15 +1,29 @@
 var config = {}
 
 //General Configuration
+config.dev = true // should the system use the development or production api enpoints; true for dev endpoints, false for prod endpoints
 config.deviceID = "Module1" // change this to something unique for each module you load this code on
 config.bounceTimer = 1
-config.alarmDefault = 1 //default status for alarm, 1 is true, 0 is false
 config.timeOffset = -5 //the UTC offset of the timezone you will be using the module in, default is EST
 
 //URL List
 config.apiKey = ""
-config.postURL = "https://example.edu/api/modules"
-config.alarmURL = "https://example.edu/api/warning.php"
+config.devURL = 'https://example.edu/api/modules/dev'
+config.prodURL = 'https://example.edu/api/modules'
+config.alarmURL = 'https://example.edu/api/alarm'
+config.warningURL = 'https://example.edu/api/warning'
+config.postOptions = {
+  url: config.dev ? config.devURL : config.prodURL,
+  headers: {
+    'X-API-KEY': config.apiKey
+  }
+}
+config.warningOptions = {
+  url: config.warningURL,
+  headers: {
+    'X-API-KEY': config.apiKey
+  }
+}
 
 //Beacon Configuration
 config.uuid = ''
